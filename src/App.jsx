@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 import './App.css'
 
@@ -19,7 +19,7 @@ function App() {
       })
   }
 
-
+  useEffect(fetchData, [])
 
   return (
     <>
