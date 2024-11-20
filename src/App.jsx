@@ -19,6 +19,8 @@ function App() {
       })
   }
 
+
+
   return (
     <>
       <h1>Blog</h1>
@@ -26,10 +28,10 @@ function App() {
       <section className='posts'>
         <div className="container">
           <div className="rov row-cols-1 row-cols-md-2 row-cols-lg-3 g-">
-            {postsData.posts ? postsData.posts.map(post => (
-              <div className="col" key={post.title}>
+            {postsData.data ? postsData.data.map(post => (
+              <div className="col" key={post.id}>
                 <div className="card">
-                  <h3>{post.titlr}</h3>
+                  <h3>{post.title}</h3>
                   <p>{post.content}</p>
                 </div>
               </div>
