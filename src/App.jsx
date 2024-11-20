@@ -23,6 +23,21 @@ function App() {
     <>
       <h1>Blog</h1>
       <button type='button' onClick={handleClick}>fetch posts</button>
+      <section className='posts'>
+        <div className="container">
+          <div className="rov row-cols-1 row-cols-md-2 row-cols-lg-3 g-">
+            {postsData.posts ? postsData.posts.map(post => (
+              <div className="col" key={post.title}>
+                <div className="card">
+                  <h3>{post.titlr}</h3>
+                  <p>{post.content}</p>
+                </div>
+              </div>
+            )) :
+              <p>no results yet</p>}
+          </div>
+        </div>
+      </section>
     </>
   )
 }
